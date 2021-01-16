@@ -1,1 +1,1 @@
-# Домашние задания (Technoatom Master Perl 2020)
+# Homeworks (Technoatom Master Perl 2020)
