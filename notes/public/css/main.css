@@ -1,0 +1,367 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body{
+    margin: 50;
+    padding: 0;
+    font-weight: 400;
+    font-family: "Helvetica Neue",Georgia, 'Times New Roman', Times, serif, helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    overflow: hidden;
+    line-height: 1.58;
+    color: #333;
+    height: 80%;
+    background-color: #f4f4f4;
+}
+/*body:before{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00AB44;
+    content: "";
+    z-index: 0;
+}
+body:after{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #6434eb;
+    content: "";
+    z-index: -1;
+}*/
+
+#mainTitle {
+    position: relative;
+    font-size: 35px;
+    text-align: center;
+}
+
+.form-auth{
+    width: 100%;
+    min-height: 38px;
+    font-size: 15px;
+    border: 1px solid #c8c8c8;
+}
+.form-group{
+    margin-bottom: 15px;
+    float: left;
+}
+input {
+    padding-left: 10px;
+    outline: none;
+    transition: all 0.5s ease 0s;
+}
+input:focus {
+    box-shadow: 0 0 15px #7a956f;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 1.7em;
+}
+a {
+    color: #128ff2;
+}
+button{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 2px solid transparent;
+    font-size: 14px;
+    outline: none;
+    line-height: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    min-height: 38px;
+}
+button.default{
+    background-color: #e8e8e8;
+    color: #333;
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.4);
+}
+button.primary {
+    background-color: #128ff2;
+    box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+button.accent {
+    background-color: #ff4743;
+    box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+#auth-page {
+    text-align: center;
+}
+.auth-page-container {
+    background: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 2px;
+    width: 100%;
+    max-width: 500px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 35px 55px 35px;
+    min-height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -160px;
+}
+.auth-page-container .auth-submit {
+    margin-top: 10px;
+}
+#signupForm {
+	margin-left: 215px;
+	float: left;
+}
+button.signup {
+    background-color: grey;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+button:hover {
+    background: #18b5a4;
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button.primary:hover {
+    background: #ffaf0f;
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.logout-container {
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    width: 10%;
+}
+#greeting {
+    font-weight: 200px;
+}
+#logout-form {
+    position: relative;
+    width: 10%;
+}
+#notes-page {
+    position: relative;
+    transition: all 0.5s ease 0.2s;
+    top: 0;
+    left: 30%;
+    width: 39%; /*30%*/
+    height: 100%;
+    background: #fff;
+}
+
+.slideToleft {
+
+}
+.slideToMiddle {
+
+}
+
+#notes-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.27);
+    margin-top: 10px;
+    height: 100%;
+}
+#createButton{
+    transition: all 0.2s ease;
+    position: relative;
+    width: 38%;
+    left: 30%;
+
+}
+#create-button-container { 
+    position: absolute;
+    margin-top: 15px;
+    top: 93%;
+    width: 100%;
+}
+
+#notes-header h2{
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+}
+#notes-page ul {
+    list-style-type: none;
+    background-color: #FFF;
+    margin: 0;
+    overflow: auto;
+    overflow-y: scroll;
+    padding: 0 20px 0px 20px;
+    max-height: 85%;
+}
+
+#notes-header h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1px; 
+}
+
+#notes-page ul li {
+    line-height: 1rem;
+    transition: all 0.1s ease-in-out 0s;
+    padding: 4px 6px;
+    margin: 0;
+    border-bottom: 2px solid #f4f4f4;
+}
+li:hover {
+    box-shadow: 2px 2px 2px #000000;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+#notes-page p {
+    overflow: hidden;
+}
+#updateNote {
+    position: absolute;
+    transition: all 0.5s ease-in-out 0s;
+    left: 42%;
+    visibility: hidden;
+    top: 100%;
+    width: 40%;
+}
+
+#noteInput {
+    resize: none;
+    font-weight: 400;
+    overflow-y: scroll;
+    font-size: 17px;
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#edit_buttons {
+    position: relative;
+    width: 40%;
+    left: 72%;
+}
+.file_item {
+    position: relative;
+}
+.file_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+.file_button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #128ff2;
+    box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease-in-out 0s;
+    padding: 0 20px;
+    color: #fff;
+}
+.file_input:hover + .file_button{
+    background: #ffaf0f;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.5);
+}
+.file{
+    margin: 20px 0px 20px 7px;
+    position: relative;
+    left: 73%;
+    width: 40%;
+}
+.file_view{
+    position: absolute;
+    top: 79%;
+    display: inline-block;
+    padding: 10px, 0px, 0px, 0px;  
+    max-width: 300px;
+}
+.file_view img{
+    max-width: 100%;
+    border: 5px solid #E5BF23;
+}
+.hidden {
+    display: none;
+}
+._error {
+    box-shadow: 0 0 10px red;
+}
+.toast {
+  max-width: 350px;
+  overflow: hidden;
+  font-size: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  display: none;
+  position: relative;
+  padding: 0.75rem 2rem 0.75rem 0.75rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.toast:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.toast_show {
+  display: block;
+}
+
+.toast__close {
+    position: absolute;
+    min-height: auto;
+    box-shadow: 0 0 0 0;
+    border-radius: 0px;
+    top: 0;
+    right: 10px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.6;
+    appearance: button;
+    margin: 0;
+    font-family: inherit;
+    border-radius: 0;
+}
+
+/*input:not([type="checkbox"]) {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}*/

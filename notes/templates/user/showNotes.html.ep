@@ -1,0 +1,52 @@
+% layout 'master';
+% title 'Notes Manager';
+
+<div class="logout-container">
+    <div class="greeting-container">
+    <p id="greeting"><i>Hello, <%= $login %>!</i></p>
+    </div>
+    <form id="logout-form" action="/logout" method="GET">
+        <button id="logoutButton" type="submit" class="default">Logout</button>
+    </form>
+</div>
+<div id="notes-page">
+    <div id="notes-container">
+        <div id="notes-header"><h2>Your notes</h2></div>
+        <ul id="noteArea">
+        </ul>
+        <div id="create-button-container">
+            <button id="createButton" class="accent">Create</button>
+        </div>
+    </div>
+</div>
+<div id="updateNote">
+    <div class="notes_form">
+    % if ($warning) {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Toast.add({
+                    text: '<%= $warning%>',
+                    color: '#FF000F',
+                    autohide: true,
+                    delay: 15000
+                });
+            });
+        </script>
+    %}
+    <div id="noteForm">
+        <textarea id="noteInput" placeholder="Type your note..." rows="15"/><%=$note_text if $note_text%></textarea>
+        <div id="edit_buttons">
+            <button id ="saveNote" type="submit" class="primary">Save</button>
+            <button id ="deleteNote" type="submit" class="primary">Delete</button>
+        </div>
+    </div>
+    </div>
+    <div class="file">
+        <div class="file_item">
+            <input id="form_image" accpet=".jpg, .png, .gif" type="file" name="image" class="file_input">
+            <div class="file_button">Choose image</div>
+        </div>
+    </div>
+    <div class="file_view" ></div>
+</div>
+<script src="/js/notes.js"></script>

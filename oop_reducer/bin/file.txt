@@ -1,0 +1,8 @@
+{"price": 1}
+{"price": 2}
+{"price": 3}
+{"price": 5}
+{"price": 2}
+{"price": 8}
+{"price": 9}
+{"price": 1}

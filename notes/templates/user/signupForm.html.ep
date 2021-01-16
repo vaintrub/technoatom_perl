@@ -1,0 +1,33 @@
+% layout 'master';
+% title 'sign up';
+
+
+<div id="auth-page">
+    <div class="auth-page-container">
+        <h1 class="title">Create your account</h1>
+                
+        <form id="authForm" action="/signup" method="POST">
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Your username" autocomplete="off" class="form-auth _req _login" name="login"/>
+                <input type="text" id="email" placeholder="Your email (Optional)" autocomplete="off" class="form-auth _req _email" name="email"/>
+                <input type="password" id="password" placeholder="Your password" autocomplete="off" class="form-auth _req _password" name="password">
+                <input type="password" id="password" placeholder="Confirm your password" autocomplete="off" class="form-auth _req _conf_password" name="conf_password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent auth-submit">Register now</button>
+            </div>
+        </form>
+        % if ($error) {
+            <div class="error" style="color: red">
+                <small> <%= $error %> </small>
+            </div>
+        %}
+
+        % if ($message) {
+            <div class="error" style="color: green">
+                <small> <%= $message %> </small>
+            </div>
+        %}
+    </div>
+</div>
+<script src="/js/validateAuth.js"></script>
