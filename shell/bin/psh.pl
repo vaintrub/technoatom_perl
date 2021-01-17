@@ -210,7 +210,7 @@ sub parse_cmd {
     return $cmd;
 }
 
-while(is_interactive()){
+while (is_interactive()) {
     $fg_pid = 0;
     print ">> ";
     $input = <>;
